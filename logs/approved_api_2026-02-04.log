@@ -1,0 +1,223 @@
+{
+    "timestamp": "2026-02-04T13:20:23+00:00",
+    "method": "POST",
+    "url": "https:\/\/checkout-test.placetopay.com\/api\/session",
+    "http_code": 200,
+    "request": {
+        "auth": {
+            "login": "2d9eaf1e662518756a3d78806543af5b",
+            "nonce": "OTg2MDE0NjMy",
+            "seed": "2026-02-04T13:20:22+00:00"
+        },
+        "locale": "en_US",
+        "payment": {
+            "reference": "ORD-20260204-A392F601",
+            "description": "Order ORD-20260204-A392F601 - MockStore Purchase",
+            "amount": {
+                "currency": "USD",
+                "total": 199.98000000000002
+            },
+            "items": [
+                {
+                    "sku": "1",
+                    "name": "Wireless Headphones Pro",
+                    "category": "physical",
+                    "qty": 1,
+                    "price": 149.99,
+                    "tax": 0
+                },
+                {
+                    "sku": "6",
+                    "name": "USB-C Hub Multiport Adapter",
+                    "category": "physical",
+                    "qty": 1,
+                    "price": 49.99,
+                    "tax": 0
+                }
+            ]
+        },
+        "buyer": {
+            "name": "John",
+            "surname": "Doe",
+            "email": "josefbehere@gmail.com",
+            "mobile": "+573114826138",
+            "document": "",
+            "documentType": "CC"
+        },
+        "expiration": "2026-02-04T14:20:22+00:00",
+        "returnUrl": "http:\/\/localhost:8000\/payment\/return?reference=ORD-20260204-A392F601",
+        "cancelUrl": "http:\/\/localhost:8000\/payment\/cancel?reference=ORD-20260204-A392F601",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/143.0.0.0 Safari\/537.36"
+    },
+    "response": {
+        "status": {
+            "status": "OK",
+            "reason": "PC",
+            "message": "The request has been processed correctly",
+            "date": "2026-02-04T08:20:23-05:00"
+        },
+        "requestId": 3531424,
+        "processUrl": "https:\/\/checkout-test.placetopay.com\/spa\/session\/3531424\/207b7e4d77de8e9ed9578199a0375fb9"
+    }
+}
+
+{
+    "timestamp": "2026-02-04T13:22:17+00:00",
+    "method": "POST",
+    "url": "https:\/\/checkout-test.placetopay.com\/api\/session\/3531424",
+    "http_code": 200,
+    "request": {
+        "auth": {
+            "login": "2d9eaf1e662518756a3d78806543af5b",
+            "nonce": "NzYyNjQxODEy",
+            "seed": "2026-02-04T13:22:17+00:00"
+        }
+    },
+    "response": {
+        "requestId": 3531424,
+        "status": {
+            "status": "APPROVED",
+            "reason": "00",
+            "message": "The request has been successfully approved",
+            "date": "2026-02-04T08:22:17-05:00"
+        },
+        "request": {
+            "locale": "en_US",
+            "buyer": {
+                "documentType": "CC",
+                "name": "John",
+                "surname": "Doe",
+                "email": "josefbehere@gmail.com",
+                "mobile": "+573114826138"
+            },
+            "payer": {
+                "document": "1152471069",
+                "documentType": "CC",
+                "name": "John",
+                "surname": "Doe",
+                "email": "josefbehere@gmail.com",
+                "mobile": "+573114826138"
+            },
+            "payment": {
+                "reference": "ORD-20260204-A392F601",
+                "description": "Order ORD-20260204-A392F601 - MockStore Purchase",
+                "amount": {
+                    "currency": "USD",
+                    "total": 199.98
+                },
+                "allowPartial": false,
+                "items": [
+                    {
+                        "sku": "1",
+                        "name": "Wireless Headphones Pro",
+                        "category": "physical",
+                        "qty": 1,
+                        "price": 149.99,
+                        "tax": 0
+                    },
+                    {
+                        "sku": "6",
+                        "name": "USB-C Hub Multiport Adapter",
+                        "category": "physical",
+                        "qty": 1,
+                        "price": 49.99,
+                        "tax": 0
+                    }
+                ],
+                "subscribe": false
+            },
+            "fields": [
+                {
+                    "keyword": "_processUrl_",
+                    "value": "https:\/\/checkout-test.placetopay.com\/spa\/session\/3531424\/207b7e4d77de8e9ed9578199a0375fb9",
+                    "displayOn": "none"
+                },
+                {
+                    "keyword": "_session_",
+                    "value": 3531424,
+                    "displayOn": "none"
+                }
+            ],
+            "returnUrl": "http:\/\/localhost:8000\/payment\/return?reference=ORD-20260204-A392F601",
+            "ipAddress": "::1",
+            "userAgent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/143.0.0.0 Safari\/537.36",
+            "expiration": "2026-02-04T14:20:22+00:00"
+        },
+        "payment": [
+            {
+                "amount": {
+                    "to": {
+                        "total": 724328,
+                        "currency": "COP"
+                    },
+                    "from": {
+                        "total": 199.98,
+                        "currency": "USD"
+                    },
+                    "factor": 3622
+                },
+                "status": {
+                    "date": "2026-02-04T08:21:56-05:00",
+                    "reason": "00",
+                    "status": "APPROVED",
+                    "message": "Approved"
+                },
+                "receipt": "99911316",
+                "refunded": false,
+                "franchise": "CR_VS",
+                "reference": "ORD-20260204-A392F601",
+                "issuerName": "JPMORGAN CHASE BANK, N.A.",
+                "authorization": "000000",
+                "paymentMethod": "visa",
+                "processorFields": [
+                    {
+                        "value": "011271442",
+                        "keyword": "merchantCode",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": "00057742",
+                        "keyword": "terminalNumber",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": "411111",
+                        "keyword": "bin",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": "0328",
+                        "keyword": "expiration",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": 1,
+                        "keyword": "installments",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": "1111",
+                        "keyword": "lastDigits",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": "6fe64f7ff63bea88acdba9769ac6c4cf",
+                        "keyword": "id",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": "000",
+                        "keyword": "b24",
+                        "displayOn": "none"
+                    }
+                ],
+                "internalReference": 1599566658,
+                "paymentMethodName": "Visa"
+            }
+        ],
+        "subscription": null,
+        "autopay": null
+    }
+}
+

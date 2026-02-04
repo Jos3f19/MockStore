@@ -1,0 +1,382 @@
+{
+    "timestamp": "2026-02-04T13:28:44+00:00",
+    "method": "POST",
+    "url": "https:\/\/checkout-test.placetopay.com\/api\/session",
+    "http_code": 200,
+    "request": {
+        "auth": {
+            "login": "2d9eaf1e662518756a3d78806543af5b",
+            "nonce": "ODAzMTczNzE4",
+            "seed": "2026-02-04T13:28:44+00:00"
+        },
+        "locale": "en_US",
+        "payment": {
+            "reference": "ORD-20260204-6A1DD4BE",
+            "description": "Order ORD-20260204-6A1DD4BE - MockStore Purchase",
+            "amount": {
+                "currency": "USD",
+                "total": 529.98
+            },
+            "items": [
+                {
+                    "sku": "4",
+                    "name": "Mechanical Gaming Keyboard",
+                    "category": "physical",
+                    "qty": 1,
+                    "price": 129.99,
+                    "tax": 0
+                },
+                {
+                    "sku": "5",
+                    "name": "Ergonomic Office Chair",
+                    "category": "physical",
+                    "qty": 1,
+                    "price": 399.99,
+                    "tax": 0
+                }
+            ]
+        },
+        "buyer": {
+            "name": "John",
+            "surname": "Doe Two",
+            "email": "josefbehere@gmail.com",
+            "mobile": "+573221232345",
+            "document": "12345678",
+            "documentType": "CC"
+        },
+        "expiration": "2026-02-04T14:28:44+00:00",
+        "returnUrl": "http:\/\/localhost:8000\/payment\/return?reference=ORD-20260204-6A1DD4BE",
+        "cancelUrl": "http:\/\/localhost:8000\/payment\/cancel?reference=ORD-20260204-6A1DD4BE",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/143.0.0.0 Safari\/537.36"
+    },
+    "response": {
+        "status": {
+            "status": "OK",
+            "reason": "PC",
+            "message": "The request has been processed correctly",
+            "date": "2026-02-04T08:28:44-05:00"
+        },
+        "requestId": 3531425,
+        "processUrl": "https:\/\/checkout-test.placetopay.com\/spa\/session\/3531425\/12d1108648ed3689fad59a5b41658508"
+    }
+}
+
+{
+    "timestamp": "2026-02-04T13:29:43+00:00",
+    "method": "POST",
+    "url": "https:\/\/checkout-test.placetopay.com\/api\/session\/3531425",
+    "http_code": 200,
+    "request": {
+        "auth": {
+            "login": "2d9eaf1e662518756a3d78806543af5b",
+            "nonce": "NzA3OTk2MjQ=",
+            "seed": "2026-02-04T13:29:42+00:00"
+        }
+    },
+    "response": {
+        "requestId": 3531425,
+        "status": {
+            "status": "PENDING",
+            "reason": "PT",
+            "message": "The request is pending",
+            "date": "2026-02-04T08:29:42-05:00"
+        },
+        "request": {
+            "locale": "en_US",
+            "buyer": {
+                "document": "12345678",
+                "documentType": "CC",
+                "name": "John",
+                "surname": "Doe Two",
+                "email": "josefbehere@gmail.com",
+                "mobile": "+573221232345"
+            },
+            "payer": {
+                "document": "12345678",
+                "documentType": "CC",
+                "name": "John",
+                "surname": "Doe Two",
+                "email": "josefbehere@gmail.com",
+                "mobile": "+573221232345"
+            },
+            "payment": {
+                "reference": "ORD-20260204-6A1DD4BE",
+                "description": "Order ORD-20260204-6A1DD4BE - MockStore Purchase",
+                "amount": {
+                    "currency": "USD",
+                    "total": 529.98
+                },
+                "allowPartial": false,
+                "items": [
+                    {
+                        "sku": "4",
+                        "name": "Mechanical Gaming Keyboard",
+                        "category": "physical",
+                        "qty": 1,
+                        "price": 129.99,
+                        "tax": 0
+                    },
+                    {
+                        "sku": "5",
+                        "name": "Ergonomic Office Chair",
+                        "category": "physical",
+                        "qty": 1,
+                        "price": 399.99,
+                        "tax": 0
+                    }
+                ],
+                "subscribe": false
+            },
+            "fields": [
+                {
+                    "keyword": "_processUrl_",
+                    "value": "https:\/\/checkout-test.placetopay.com\/spa\/session\/3531425\/12d1108648ed3689fad59a5b41658508",
+                    "displayOn": "none"
+                },
+                {
+                    "keyword": "_session_",
+                    "value": 3531425,
+                    "displayOn": "none"
+                }
+            ],
+            "returnUrl": "http:\/\/localhost:8000\/payment\/return?reference=ORD-20260204-6A1DD4BE",
+            "ipAddress": "::1",
+            "userAgent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/143.0.0.0 Safari\/537.36",
+            "expiration": "2026-02-04T14:28:44+00:00"
+        },
+        "payment": [
+            {
+                "amount": {
+                    "to": {
+                        "total": 1919588,
+                        "currency": "COP"
+                    },
+                    "from": {
+                        "total": 529.98,
+                        "currency": "USD"
+                    },
+                    "factor": 3622
+                },
+                "status": {
+                    "date": "2026-02-04T08:29:35-05:00",
+                    "reason": "?-",
+                    "status": "PENDING",
+                    "message": "Pending transaction. Please consult with your financial entity if a debit was completed\/submitted"
+                },
+                "receipt": "99911775",
+                "refunded": false,
+                "franchise": "CR_VS",
+                "reference": "ORD-20260204-6A1DD4BE",
+                "authorization": "000000",
+                "paymentMethod": "visa",
+                "processorFields": [
+                    {
+                        "value": "011271442",
+                        "keyword": "merchantCode",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": "00057742",
+                        "keyword": "terminalNumber",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": "486492",
+                        "keyword": "bin",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": "0532",
+                        "keyword": "expiration",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": 1,
+                        "keyword": "installments",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": "4366",
+                        "keyword": "lastDigits",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": "c8080fc42fd8dbd2c48cde7076e7dc6d",
+                        "keyword": "id",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": "?-",
+                        "keyword": "b24",
+                        "displayOn": "none"
+                    }
+                ],
+                "internalReference": 1599566660,
+                "paymentMethodName": "Visa"
+            }
+        ],
+        "subscription": null,
+        "autopay": null
+    }
+}
+
+{
+    "timestamp": "2026-02-04T13:30:13+00:00",
+    "method": "POST",
+    "url": "https:\/\/checkout-test.placetopay.com\/api\/session\/3531425",
+    "http_code": 200,
+    "request": {
+        "auth": {
+            "login": "2d9eaf1e662518756a3d78806543af5b",
+            "nonce": "MTYxNzU2MDg4Mw==",
+            "seed": "2026-02-04T13:30:13+00:00"
+        }
+    },
+    "response": {
+        "requestId": 3531425,
+        "status": {
+            "status": "PENDING",
+            "reason": "PE",
+            "message": "The request is pending",
+            "date": "2026-02-04T08:30:13-05:00"
+        },
+        "request": {
+            "locale": "en_US",
+            "buyer": {
+                "document": "12345678",
+                "documentType": "CC",
+                "name": "John",
+                "surname": "Doe Two",
+                "email": "josefbehere@gmail.com",
+                "mobile": "+573221232345"
+            },
+            "payer": {
+                "document": "12345678",
+                "documentType": "CC",
+                "name": "John",
+                "surname": "Doe Two",
+                "email": "josefbehere@gmail.com",
+                "mobile": "+573221232345"
+            },
+            "payment": {
+                "reference": "ORD-20260204-6A1DD4BE",
+                "description": "Order ORD-20260204-6A1DD4BE - MockStore Purchase",
+                "amount": {
+                    "currency": "USD",
+                    "total": 529.98
+                },
+                "allowPartial": false,
+                "items": [
+                    {
+                        "sku": "4",
+                        "name": "Mechanical Gaming Keyboard",
+                        "category": "physical",
+                        "qty": 1,
+                        "price": 129.99,
+                        "tax": 0
+                    },
+                    {
+                        "sku": "5",
+                        "name": "Ergonomic Office Chair",
+                        "category": "physical",
+                        "qty": 1,
+                        "price": 399.99,
+                        "tax": 0
+                    }
+                ],
+                "subscribe": false
+            },
+            "fields": [
+                {
+                    "keyword": "_processUrl_",
+                    "value": "https:\/\/checkout-test.placetopay.com\/spa\/session\/3531425\/12d1108648ed3689fad59a5b41658508",
+                    "displayOn": "none"
+                },
+                {
+                    "keyword": "_session_",
+                    "value": 3531425,
+                    "displayOn": "none"
+                }
+            ],
+            "returnUrl": "http:\/\/localhost:8000\/payment\/return?reference=ORD-20260204-6A1DD4BE",
+            "ipAddress": "::1",
+            "userAgent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/143.0.0.0 Safari\/537.36",
+            "expiration": "2026-02-04T14:28:44+00:00"
+        },
+        "payment": [
+            {
+                "amount": {
+                    "to": {
+                        "total": 1919588,
+                        "currency": "COP"
+                    },
+                    "from": {
+                        "total": 529.98,
+                        "currency": "USD"
+                    },
+                    "factor": 3622
+                },
+                "status": {
+                    "date": "2026-02-04T08:29:35-05:00",
+                    "reason": "92",
+                    "status": "REJECTED",
+                    "message": "Denied, Card can be blocked or timeout"
+                },
+                "receipt": "99911783",
+                "refunded": false,
+                "franchise": "CR_VS",
+                "reference": "ORD-20260204-6A1DD4BE",
+                "authorization": "000000",
+                "paymentMethod": "visa",
+                "processorFields": [
+                    {
+                        "value": "011271442",
+                        "keyword": "merchantCode",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": "00057742",
+                        "keyword": "terminalNumber",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": "486492",
+                        "keyword": "bin",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": "0532",
+                        "keyword": "expiration",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": 1,
+                        "keyword": "installments",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": "4366",
+                        "keyword": "lastDigits",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": "c8080fc42fd8dbd2c48cde7076e7dc6d",
+                        "keyword": "id",
+                        "displayOn": "none"
+                    },
+                    {
+                        "value": "050",
+                        "keyword": "b24",
+                        "displayOn": "none"
+                    }
+                ],
+                "internalReference": 1599566660,
+                "paymentMethodName": "Visa"
+            }
+        ],
+        "subscription": null,
+        "autopay": null
+    }
+}
+

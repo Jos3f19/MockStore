@@ -1,0 +1,5 @@
+# API Request Logs
+# This directory contains logs of all PlacetoPay API requests
+# Files are named: api_YYYY-MM-DD.log
+
+*.log
